@@ -20,7 +20,7 @@ public class BoardController {
     @GetMapping()
     public List<Board> getBoards(@RequestParam(name = "page", defaultValue = "1") int page,
                                  @RequestParam(name = "size", defaultValue = "10") int size) {
-        System.out.println("page = " + page + ", size = " + size);
+
         return boardService.getBoards(page, size);
     }
 }
