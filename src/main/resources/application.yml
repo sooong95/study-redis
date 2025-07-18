@@ -2,12 +2,11 @@ spring:
   profiles:
     default: local
   datasource:
-    url: jdbc:mysql://localhost:3306/redis?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=Asia/Seoul
+    url: jdbc:mysql://localhost:3306/redis
     username: song
     password: '0000'
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
-    database-platform: org.hibernate.dialect.MySQL8Dialect
     hibernate:
       ddl-auto: update
     show-sql: true
@@ -18,4 +17,4 @@ spring:
 
 logging:
   level:
-    org.springframework.cache: trace
+    org.springframework.cache: trace # Redis ??? ?? ??? ????? ??
