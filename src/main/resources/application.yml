@@ -18,3 +18,13 @@ spring:
 logging:
   level:
     org.springframework.cache: trace # Redis ??? ?? ??? ????? ??
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+  datasource:
+    url: jdbc:mysql://instagram-db.cbe4mg0g0beg.ap-northeast-2.rds.amazonaws.com:3306/mydb
+    username: admin
+    password: password
