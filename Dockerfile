@@ -1,4 +1,5 @@
-FROM ubuntu:latest
-LABEL authors="song"
+FROM openjdk:21-jdk
 
-ENTRYPOINT ["top", "-b"]
+COPY build/libs/*SNAPSHOT.jar app.jar
+
+ENTRYPOINT ["java", "-jar", "/app.jar"]
